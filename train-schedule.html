@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CDN-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    <title>Train Data</title>
+</head>
+
+<body style="background-color: antiquewhite;">
+    <main>
+        <div class="jumbotron jumbotron-fluid" style="background-color: indigo; color: white;">
+            <div class="container">
+                <h1 class="display-4">Train Scheduler</h1>
+                <p class="lead">Info about upcoming trains...
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="card-header" style="background-color: indigo; color: white;">
+                    <span>Current Train Schedule</span><spani id="currentTime" class="align-right"></span>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Train Name</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Frequency (min)</th>
+                                <th scope="col">Next Arrival</th>
+                                <th scope="col">Minutes Away</th>
+                            </tr>
+                        </thead>
+                        <tbody class="trainData">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-3">
+            <div class="card">
+                <div class="card-header" style="background-color: indigo; color: white;">
+                    Add Train
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Train Name</label>
+                            <input type="text" class="form-control" id="trainName" placeholder="Enter Train Name">
+                        </div>
+                        <div class="form-group">
+                            <label>Destination</label>
+                            <input type="text" class="form-control" id="destination" placeholder="Enter Destination">
+                        </div>
+                        <div class="form-group">
+                            <label>Frequency (min)</label>
+                            <input type="number" class="form-control" id="frequency" placeholder="Enter Frequency of Service, in minutes">
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submitTrainData">Submit</button>
+                    </form>
+                </div>
+            </div>
+    </main>
+
+</body>
+
+</html>
